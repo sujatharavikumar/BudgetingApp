@@ -5,30 +5,29 @@ package ravikumar.sujatha.domain;
  */
 public class Payment {
 
-    private Long id;
+    private String username;
     private Short amount;
-
-    public Payment (Long id, Short amount) {
-        this.id = id;
-        this.amount = amount;
-    }
 
     public Payment () {}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setAmount(Short amount) {
+    public Payment(String username, Short amount) {
+        this.username = username;
         this.amount = amount;
     }
 
-    public Long getId() {
+    public String getUsername() {
+        return username;
+    }
 
-        return id;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Short getAmount() {
         return amount;
+    }
+
+    public void setAmount(Short amount) {
+        this.amount = amount;
     }
 }

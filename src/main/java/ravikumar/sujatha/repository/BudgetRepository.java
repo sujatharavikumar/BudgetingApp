@@ -12,8 +12,7 @@ import java.util.List;
  * Created by sujatharavikumar on 11/1/16.
  */
 @Transactional
-@RepositoryRestResource(collectionResourceRel = "budget", path = "budgets")
 public interface BudgetRepository extends JpaRepository<Budget, Long> {
 
-    List<Budget> findByUsername(@Param("username") String username);
+    Budget findByUsername(@Param("username") String username);
 }

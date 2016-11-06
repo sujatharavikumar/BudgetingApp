@@ -13,7 +13,6 @@ import java.util.List;
  */
 
 @Transactional
-@RepositoryRestResource(collectionResourceRel = "users", path = "users")
 public interface UserRepository extends JpaRepository<User, Long> {
 
     User findByUsername (@Param("username") String username);
